@@ -1,0 +1,74 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Електрік Львів</title>
+    <link href="{% static 'ElectrHead/style.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <section>
+        <div class="header">
+            <img src="{% static 'images/lampa6.jpg' %}" alt="I wont code" class="logo">
+            <ul>
+                <li>
+                    <a href="{% url 'base' %}" class="active">Головна</a>
+                </li>
+                <li>
+                    <a href="http://google.com">Інфо</a>
+                </li>
+                <li>
+                    <a href="#">Сервіс</a>
+                </li>
+                <li>
+                    <a href="{% url 'myJob' %}">Моі роботи</a>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Контакти</a>
+                </li>
+            </ul>
+        </div>
+        {% block content %}
+
+        {% endblock content %}
+        <div class="bannerText">
+            <h2> Електрік</h2><br>
+            <h3>Здійснюю Ваші мрії</h3>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco.Sunt in culpa qui officia
+                deserunt mollit anim id est laborum consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore
+                dolore magna aliqua.Ut enim ad minim veniam,quis nostrud
+                enim ad minim veniam,quis nostrud exercitation ullamco.</p>
+            <a href="#">Читати</a>
+        </div>
+        <img src="{% static 'images/lampa16.jpg' %}" class="bulb" width="500px">
+    </section>
+
+    <div class="xx">
+        <h1>Гарантія виконання і якість робіт!</h1>
+    </div>
+
+    <div class="footer">
+        <div class="icons">
+            <h2>Footer</h2>
+            <h3>Всі права захишені 2020 р. Soft Developer by Andii Shevchenko</h3>
+            <ul class="sci">
+                <li><a href="#"><img src="{% static 'images/Facebook.png' %}"></a></li>
+                <li><a href="#"><img src="{% static 'images/twitter.png' %}"></a></li>
+                <li><a href="#"><img src="{% static 'images/instagram.jpg' %}"></a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
